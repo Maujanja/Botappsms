@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "SMS Bot",
+    "slug": "sms-bot",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.brimedge.smsbot",
+      "permissions": [
+        "READ_SMS",
+        "SEND_SMS",
+        "RECEIVE_SMS",
+        "READ_PHONE_STATE",
+        "ANSWER_PHONE_CALLS",
+        "NOTIFICATION_LISTENER"
+      ]
+    },
+    "plugins": [
+      "expo-sms"
+    ]
+  }
+}
