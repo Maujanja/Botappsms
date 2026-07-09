@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity, ScrollView, Alert,
 import * as SMS from 'expo-sms';
 
 const API_URL = 'https://plndmqvlkchbtcfeoson.supabase.co/functions/v1/sms-reply';
-const API_KEY = 'YOUR_API_KEY_HERE';
+const API_KEY = 'xkFCkWe7drKKxkeCbGF2e2gkZcGOIVRaSDW0vzEk';
 
 export default function App() {
   const [logs, setLogs] = useState([]);
