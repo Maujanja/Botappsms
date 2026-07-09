@@ -1,8 +1,6 @@
 name: Build APK
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -21,8 +19,10 @@ jobs:
       - name: Install Expo CLI
         run: npm install -g expo-cli eas-cli
         
-      - name: Expo Setup
-        run: npx expo login --token ${{ secrets.EXPO_TOKEN }}
+      - name: Login to Expo
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: npx expo login --token "$EXPO_TOKEN"
         
       - name: Build APK
         run: npx eas build --platform android --profile preview --non-interactive
