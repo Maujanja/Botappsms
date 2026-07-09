@@ -1,0 +1,14 @@
+name: Build APK
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install
+      - run: npm install -g expo-cli eas-cli
+      - run: echo "${{ secrets.EXPO_TOKEN }}" | npx expo login --token
+      - run: npx eas build --platform android --profile preview --non-interactive
